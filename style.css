@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.profile{
+   max-width: 100%;
+}
+main{
+    padding: 5%;
+    background-image: linear-gradient();
+}
+.about, .icons, .about-text, footer{
+    display: flex;
+}
+.about{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.about-text{
+    padding: 10px 20px;
+    flex-direction: column;
+    box-shadow: 1px 1px 1px 0.5px rgba(0, 0, 0, 0.453);
+    gap: 40px;
+    font-size: 24px;
+}
+.picture{
+    width: 100%;
+    position: relative;
+}
+.about .caption{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    font-size: 48px;
+    text-align: center;
+}
+.caption{
+   padding: 5px;
+}
+.icons{
+    align-self: flex-end;
+    gap: 10px;
+}
+.icons img, .logo img{
+    height: 25px;
+    width: 25px;
+    
+}
+.work > img{
+    height: 200px;
+    width: 100%;
+}
+ .work{
+    border: 1px solid black;
+    width: 100%;
+ }
+ .caption p{
+   margin: 5px 0 10px;
+ }
+ .workBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 100px;
+ }
+ .workTitle{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0 10px;
+ }
+ .contact svg{
+    fill: white;
+    width: 20px;
+    height: 20px;
+ }
+ .contact-info{
+    vertical-align: center;
+    display: flex;
+    align-items: center;
+ }
+ .contact-info > a{
+    color: white;
+    text-decoration: none;
+ }
+ footer{
+    justify-content: space-around;
+    background-color: #0891b2;
+    padding: 30px;
+ }
+ .foot{
+    width: 300px;
+ }
+ .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+ }
+ footer .icons{
+    align-self: flex-start;
+ }
