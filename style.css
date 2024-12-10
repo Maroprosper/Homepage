@@ -4,29 +4,33 @@
     margin: 0;
 }
 .profile{
-   max-width: 100%;
+   width: 100%;
 }
 main{
     padding: 5%;
-    background-image: linear-gradient();
-}
-.about, .icons, .about-text, footer{
+    background-image: linear-gradient(-10deg, #fff 30%, #0891b2 0%);
+    background-size: 100vw 105vh;
+    background-repeat: no-repeat;
+}    
+.about, .icons, .about-text, footer, .contact-info > a, .contact{
     display: flex;
 }
 .about{
     justify-content: center;
     align-items: center;
     width: 100%;
+    
 }
 .about-text{
     padding: 10px 20px;
     flex-direction: column;
-    box-shadow: 1px 1px 1px 0.5px rgba(0, 0, 0, 0.453);
-    gap: 40px;
+    box-shadow: 1px 1px 1px 0.5px rgba(0, 0, 0, 0.453) inset, -1px -1px 1px 0.5px rgba(0, 0, 0, 0.453) inset;
+    gap: 36px;
     font-size: 24px;
+    background: white;
 }
 .picture{
-    width: 100%;
+    width: 200%;
     position: relative;
 }
 .about .caption{
@@ -38,11 +42,11 @@ main{
     text-align: center;
 }
 .caption{
-   padding: 5px;
+   padding: 10px;
 }
 .icons{
     align-self: flex-end;
-    gap: 10px;
+    gap: 20px;
 }
 .icons img, .logo img{
     height: 25px;
@@ -54,16 +58,17 @@ main{
     width: 100%;
 }
  .work{
-    border: 1px solid black;
     width: 100%;
+    box-shadow: 1px 1px 1px 0.5px rgba(0, 0, 0, 0.453), -1px -1px 1px 0.5px rgba(0, 0, 0, 0.453) inset;
  }
  .caption p{
-   margin: 5px 0 10px;
+   margin: 20px 0 30px;
  }
  .workBox{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 100px;
+    gap: 50px;
+    margin-top: 20px;
  }
  .workTitle{
     display: flex;
@@ -75,14 +80,15 @@ main{
     width: 20px;
     height: 20px;
  }
- .contact-info{
-    vertical-align: center;
-    display: flex;
-    align-items: center;
- }
+ 
  .contact-info > a{
     color: white;
     text-decoration: none;
+    gap: 5px;
+ }
+ .contact{
+  flex-direction: column;
+  gap: 5px;
  }
  footer{
     justify-content: space-around;
@@ -95,9 +101,15 @@ main{
  .left{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     color: white;
  }
  footer .icons{
     align-self: flex-start;
+ }
+ .works{
+    margin: 20vh 0 10px;
+ }
+ .works > h2{
+    font-size: 36px;
  }
