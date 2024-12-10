@@ -9,7 +9,7 @@
 main{
     padding: 5%;
     background-image: linear-gradient(-10deg, #fff 30%, #0891b2 0%);
-    background-size: 100vw 105vh;
+    background-size: 100vw 70vh;
     background-repeat: no-repeat;
 }    
 .about, .icons, .about-text, footer, .contact-info > a, .contact{
@@ -19,18 +19,20 @@ main{
     justify-content: center;
     align-items: center;
     width: 100%;
-    
+    flex-direction: column;
 }
 .about-text{
     padding: 10px 20px;
     flex-direction: column;
-    box-shadow: 1px 1px 1px 0.5px rgba(0, 0, 0, 0.453) inset, -1px -1px 1px 0.5px rgba(0, 0, 0, 0.453) inset;
     gap: 36px;
     font-size: 24px;
     background: white;
 }
+.about-text h2{
+  text-align: center;
+}
 .picture{
-    width: 200%;
+    width: 100%;
     position: relative;
 }
 .about .caption{
@@ -45,7 +47,7 @@ main{
    padding: 10px;
 }
 .icons{
-    align-self: flex-end;
+    align-self: center;
     gap: 20px;
 }
 .icons img, .logo img{
@@ -66,7 +68,7 @@ main{
  }
  .workBox{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 50px;
     margin-top: 20px;
  }
@@ -91,18 +93,24 @@ main{
   gap: 5px;
  }
  footer{
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     background-color: #0891b2;
-    padding: 30px;
  }
  .foot{
-    width: 300px;
+    width: 100%;
  }
  .left{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     color: white;
+    gap: 20px;
+    padding: 30px;
+ }
+ .left > h2, .left .icons{
+    align-self: center;
  }
  footer .icons{
     align-self: flex-start;
@@ -112,4 +120,51 @@ main{
  }
  .works > h2{
     font-size: 36px;
+    text-align: center;
  }
+ @media only screen and (min-width: 600px) {
+    .about{
+      flex-direction: row;
+    }
+    .picture{
+      width: 200%;
+    }
+    main{
+      background-size: 100vw 105vh;
+    }
+    .about-text{
+      box-shadow: 1px 1px 1px 0.5px rgba(0, 0, 0, 0.453) inset, -1px -1px 1px 0.5px rgba(0, 0, 0, 0.453) inset;
+    }
+    .about-text h2{
+      text-align: left;
+    }
+    .icons{
+      align-self: flex-end;
+    }
+    .works > h2{
+      text-align: left;
+    }
+    .workBox{
+      grid-template-columns: 1fr 1fr;
+    }
+    footer{
+      flex-direction: row;
+      padding: 30px;
+    }
+    .left{
+      padding: 0;
+    }
+    .foot{
+      width: 300px;
+   }
+   .left > h2, .left .icons{
+    align-self: flex-start;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+  .workBox{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
